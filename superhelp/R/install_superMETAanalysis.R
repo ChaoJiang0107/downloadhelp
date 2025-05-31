@@ -28,13 +28,13 @@ install_superMETAanalysis <- function (token)
     dir.create(path = dest, recursive = TRUE, showWarnings = FALSE)
     (tf <- paste0(dest, "/superMETAanalysis.zip"))
     if (do::is.windows()) {
-        download.file(url = "https://github.com/ChaoJiang0107/superRpackage/superMETAanalysis_win/zip/refs/heads/main",
+        download.file(url = "https://github.com/ChaoJiang0107/superRpackage/tree/main/superMETAanalysis",
                       destfile = tf, mode = "wb", headers = c(NULL, Authorization = sprintf("token %s",
                                                                                             token)))
         unzip(zipfile = tf, exdir = dest, overwrite = TRUE)
     }
     else {
-        download.file(url = "https://github.com/ChaoJiang0107/superRpackage/superMETAanalysis_mac/zip/refs/heads/main",
+        download.file(url = "https://github.com/ChaoJiang0107/superRpackage/tree/main/superMETAanalysis",
                       destfile = tf, mode = "wb", headers = c(NULL, Authorization = sprintf("token %s",
                                                                                             token)))
         unzip(zipfile = tf, exdir = dest, overwrite = TRUE)
